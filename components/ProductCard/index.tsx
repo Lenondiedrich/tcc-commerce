@@ -14,16 +14,14 @@ export const ProductCard = (product: Product) => {
   };
 
   return (
-    <div
-      onClick={() => router.push(`/product/${product.id}`)}
-      className="cursor-pointer border-2 border-light-violet max-w-[200px] max-h-[300px] bg-white w-full h-full flex flex-col items-center rounded-lg font-poppins gap-2 p-4"
-    >
+    <div className="cursor-pointer border-2 border-light-violet max-w-[200px] max-h-[300px] bg-white w-full h-full flex flex-col items-center rounded-lg font-poppins gap-2 p-4">
       <Image
         src={product.thumbnail}
         alt="Imagem do produto"
         width={100}
         height={100}
         className="rounded"
+        onClick={() => router.push(`/product/${product.id}`)}
       />
       <p className="font-semibold text-primary-black text-[13px]">
         {product.title}
